@@ -1,0 +1,30 @@
+theme = "fleet_dark"
+
+[editor]
+shell = ["zsh", "-c"]
+line-number = "relative"
+cursorline = true
+auto-format = true
+rulers = [88]
+bufferline = "always"
+color-modes = true
+insert-final-newline = true
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+[editor.indent-guides]
+render = true
+
+[keys.normal]
+space = { "space" = "file_picker" }
+g = { v = ["vsplit", "goto_definition"] }
+y = "yank_to_clipboard"
+Y = "yank_main_selection_to_clipboard"
+p = "paste_clipboard_after"
+P = "paste_clipboard_before"
+
+[keys.insert]
+"A-right" = "move_next_word_start"
+"A-left" = "move_prev_word_start"

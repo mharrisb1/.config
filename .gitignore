@@ -3,3 +3,6 @@ gcloud/
 
 # ignore 1password
 op/
+
+# ignore zed
+zed/

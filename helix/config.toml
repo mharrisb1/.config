@@ -5,10 +5,11 @@ shell = ["zsh", "-c"]
 line-number = "relative"
 cursorline = true
 auto-format = true
+preview-completion-insert = false
+completion-replace = true
 rulers = [88]
 bufferline = "always"
 color-modes = true
-insert-final-newline = true
 
 [editor.lsp]
 display-messages = true

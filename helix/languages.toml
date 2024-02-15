@@ -18,6 +18,7 @@ roots = ["pyproject.toml", "setup.py", "poetry.lock", "pyrightconfig.json"]
 comment-token = "#"
 language-servers = ["pyright", "ruff"]
 indent = { tab-width = 4, unit = "    " }
+auto-format = true
 
 [language-server.ruff]
 command = "ruff-lsp"

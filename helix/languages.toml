@@ -1,9 +1,32 @@
 ############
+# C
+###########
+[[language]]
+name = "c"
+auto-format = true
+
+############
 # ESlint
 ############
 [language-server.eslint]
 args = ["--stdio"]
 command = "vscode-eslint-language-server"
+
+[language-server.eslint.config]
+format = true
+nodePath = ""
+onIgnoredFiles = "off"
+packageManager = "yarn"
+quiet = false
+rulesCustomizations = []
+run = "onType"
+useESLintClass = false
+validate = "on"
+experimental = { useFlatConfig = true }
+
+[language-server.eslint.config.codeActionOnSave]
+enable = true
+mode = "fixAll"
 
 ############
 # Python
@@ -57,35 +80,42 @@ args = ["--stdio"]
 [[language]]
 name = "toml"
 formatter = { command = "taplo", args = ["fmt", "-"] }
+auto-format = true
 
 ############
 # Typescript
 ###########
 [[language]]
 name = "typescript"
-scope = "source.ts"
-injection-regex = "(ts|typescript)"
-file-types = ["ts", "mts", "cts"]
-language-id = "typescript"
-shebangs = ["deno", "ts-node"]
 language-servers = [
   { except-features = [
     "format",
   ], name = "typescript-language-server" },
   "eslint",
 ]
-indent = { tab-width = 2, unit = "  " }
+roots = [
+  "package.json",
+  "tsconfig.json",
+  ".prettierrc.json",
+  ".prettierrc",
+  "eslint.config.js",
+]
+formatter = { command = 'prettier', args = ["--stdin-filepath", "file.ts"] }
+auto-format = true
 
 ############
 # Vue
 ############
 [[language]]
 name = "vue"
-scope = "source.vue"
-injection-regex = "vue"
-file-types = ["vue"]
-roots = ["package.json"]
-indent = { tab-width = 2, unit = "  " }
+roots = [
+  "package.json",
+  "tsconfig.json",
+  ".prettierrc.json",
+  ".prettierrc",
+  "tailwind.config.js",
+  "eslint.config.js",
+]
 language-servers = [
   { except-features = [
     "format",
@@ -93,3 +123,5 @@ language-servers = [
   "tailwindcss",
   "eslint",
 ]
+formatter = { command = 'prettier', args = ["--stdin-filepath", "file.vue"] }
+auto-format = true

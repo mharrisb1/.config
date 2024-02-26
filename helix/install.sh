@@ -29,7 +29,6 @@ npm i -g vscode-langservers-extracted --silent
 echo -e "[${GREEN}INFO${NO_COLOR}] js/ts"
 npm install -g typescript typescript-language-server --silent
 npm i -g prettier --silent
-npm install -g eslint_d --silent
 
 # Markdown
 echo -e "[${GREEN}INFO${NO_COLOR}] markdown"

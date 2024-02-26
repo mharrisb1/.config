@@ -6,27 +6,16 @@ name = "c"
 auto-format = true
 
 ############
-# ESlint
+# Markdown
 ############
-[language-server.eslint]
-args = ["--stdio"]
-command = "vscode-eslint-language-server"
+[[language]]
+name = "markdown"
 
-[language-server.eslint.config]
-format = true
-nodePath = ""
-onIgnoredFiles = "off"
-packageManager = "yarn"
-quiet = false
-rulesCustomizations = []
-run = "onType"
-useESLintClass = false
-validate = "on"
-experimental = { useFlatConfig = true }
-
-[language-server.eslint.config.codeActionOnSave]
-enable = true
-mode = "fixAll"
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
 
 ############
 # Python
@@ -87,12 +76,7 @@ auto-format = true
 ###########
 [[language]]
 name = "typescript"
-language-servers = [
-  { except-features = [
-    "format",
-  ], name = "typescript-language-server" },
-  "eslint",
-]
+language-servers = ["typescript-language-server"]
 roots = [
   "package.json",
   "tsconfig.json",
@@ -116,12 +100,6 @@ roots = [
   "tailwind.config.js",
   "eslint.config.js",
 ]
-language-servers = [
-  { except-features = [
-    "format",
-  ], name = "vuels" },
-  "tailwindcss",
-  "eslint",
-]
+language-servers = ["vuels", "tailwindcss"]
 formatter = { command = 'prettier', args = ["--stdin-filepath", "file.vue"] }
 auto-format = true

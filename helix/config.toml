@@ -26,6 +26,12 @@ Y = "yank_main_selection_to_clipboard"
 p = "paste_clipboard_after"
 P = "paste_clipboard_before"
 
+[keys.select]
+y = "yank_to_clipboard"
+Y = "yank_main_selection_to_clipboard"
+p = "paste_clipboard_after"
+P = "paste_clipboard_before"
+
 [keys.insert]
 "A-right" = "move_next_word_start"
 "A-left" = "move_prev_word_start"

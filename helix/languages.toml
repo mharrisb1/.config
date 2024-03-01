@@ -85,21 +85,24 @@ roots = [
   "eslint.config.js",
 ]
 formatter = { command = 'prettier', args = ["--stdin-filepath", "file.ts"] }
-auto-format = true
+auto-format = false
 
 ############
 # Vue
 ############
 [[language]]
 name = "vue"
-roots = [
-  "package.json",
-  "tsconfig.json",
-  ".prettierrc.json",
-  ".prettierrc",
-  "tailwind.config.js",
-  "eslint.config.js",
-]
-language-servers = ["vuels", "tailwindcss"]
-formatter = { command = 'prettier', args = ["--stdin-filepath", "file.vue"] }
-auto-format = true
+scope = "source.vue"
+injection-regex = "vue"
+file-types = ["vue"]
+language-servers = ["volar", "eslint", "tailwindcss"]
+formatter = { command = 'prettier', args = ["--parser", "vue"] }
+roots = ["package.json"]
+auto-format = false
+
+[language-server.volar]
+command = "vue-language-server"
+args = ["--stdio"]
+
+[language-server.volar.config]
+typescript = { tsdk = "./node_modules/typescript/lib" }

@@ -18,6 +18,9 @@ display-inlay-hints = true
 [editor.indent-guides]
 render = true
 
+[editor.smart-tab]
+enable = false
+
 [keys.normal]
 space = { "space" = "file_picker" }
 g = { v = ["vsplit", "goto_definition"] }

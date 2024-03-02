@@ -30,6 +30,10 @@ echo -e "[${GREEN}INFO${NO_COLOR}] js/ts"
 npm install -g typescript typescript-language-server --silent
 npm i -g prettier --silent
 
+# Lua
+echo -e "[${GREEN}INFO${NO_COLOR}] lua"
+brew install lua-language-server
+
 # Markdown
 echo -e "[${GREEN}INFO${NO_COLOR}] markdown"
 brew install marksman --quiet

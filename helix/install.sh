@@ -37,6 +37,7 @@ brew install lua-language-server
 # Markdown
 echo -e "[${GREEN}INFO${NO_COLOR}] markdown"
 brew install marksman --quiet
+cargo install --git https://github.com/github-language-server/github-lsp --quiet
 
 # Python
 echo -e "[${GREEN}INFO${NO_COLOR}] python"

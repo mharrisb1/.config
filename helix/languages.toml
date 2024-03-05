@@ -109,7 +109,7 @@ name = "vue"
 scope = "source.vue"
 injection-regex = "vue"
 file-types = ["vue"]
-language-servers = ["volar", "eslint", "tailwindcss"]
+language-servers = ["volar", "tailwindcss"]
 formatter = { command = 'prettier', args = ["--parser", "vue"] }
 roots = ["package.json"]
 auto-format = false

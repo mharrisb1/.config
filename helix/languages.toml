@@ -1,4 +1,12 @@
-############
+###########
+# Bash
+###########
+[[language]]
+name = "bash"
+formatter = { command = "shfmt", args = ["--indent", "2"] }
+auto-format = true
+
+###########
 # C
 ###########
 [[language]]

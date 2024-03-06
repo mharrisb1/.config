@@ -28,6 +28,9 @@ require("xpm").setup({
     'dtomvan/xpm.xplr',
     { name = 'sayanarijit/fzf.xplr' },
     { name = 'sayanarijit/tree-view.xplr' },
+    { name = 'prncss-xyz/icons.xplr' },
+    { name = 'dtomvan/extra-icons.xplr' },
+    { name = 'sayanarijit/map.xplr' }
   },
   auto_install = true,
   auto_cleanup = true,
@@ -35,6 +38,8 @@ require("xpm").setup({
 
 require("fzf").setup()
 require("tree-view").setup()
+require("icons").setup()
+require("extra-icons").setup()
 
 -- hacks
 

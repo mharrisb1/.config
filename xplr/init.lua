@@ -7,11 +7,11 @@ local xpm_path = home .. "/.local/share/xplr/dtomvan/xpm.xplr"
 local xpm_url = "https://github.com/dtomvan/xpm.xplr"
 
 package.path = package.path
-  .. ";"
-  .. xpm_path
-  .. "/?.lua;"
-  .. xpm_path
-  .. "/?/init.lua"
+    .. ";"
+    .. xpm_path
+    .. "/?.lua;"
+    .. xpm_path
+    .. "/?/init.lua"
 
 os.execute(
   string.format(
@@ -86,8 +86,6 @@ xplr.fn.custom.preview_pane.render = function(ctx)
     title = { format = n.absolute_path, style = xplr.util.lscolor(n.absolute_path) }
     if n.is_file then
       body = read(n.absolute_path, ctx.layout_size.height) or stat(n)
-    else
-      body = stat(n)
     end
   end
 

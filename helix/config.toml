@@ -22,7 +22,7 @@ render = true
 enable = false
 
 [keys.normal]
-space = { "space" = "file_picker" }
+space = { "space" = "file_picker", "z" = ":sh zellij run -c -- xplr" }
 g = { v = ["vsplit", "goto_definition"] }
 y = "yank_to_clipboard"
 Y = "yank_main_selection_to_clipboard"

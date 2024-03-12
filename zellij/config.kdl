@@ -148,6 +148,10 @@ keybinds {
         bind "Ctrl g" { SwitchToMode "Locked"; }
         bind "Ctrl q" { Quit; }
         bind "Alt n" { NewPane; }
+        unbind "Alt Left"
+        unbind "Alt Right"
+        unbind "Alt Down"
+        unbind "Alt Up"
         // bind "Alt Left" { MoveFocusOrTab "Left"; }
         // bind "Alt Right" { MoveFocusOrTab "Right"; }
         // bind "Alt Down" { MoveFocus "Down"; }

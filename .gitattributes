@@ -4,3 +4,5 @@
 *.yaml linguist-language=yaml
 *.yml linguist-detectable=true
 *.yml linguist-language=yml
+*.kdl linguist-detectable=true
+*.kdl linguist-language=kdl

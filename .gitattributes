@@ -2,3 +2,5 @@
 *.toml linguist-language=toml
 *.yaml linguist-detectable=true
 *.yaml linguist-language=yaml
+*.yml linguist-detectable=true
+*.yml linguist-language=yml

@@ -41,7 +41,6 @@ injection-regex = "python"
 file-types = ["py", "pyi", "py3", "pyw", "ptl", "rpy", "cpy", "ipy", "pyt"]
 shebangs = ["python"]
 roots = ["pyproject.toml", "setup.py", "poetry.lock", "pyrightconfig.json"]
-comment-token = "#"
 language-servers = ["pyright", "ruff"]
 indent = { tab-width = 4, unit = "    " }
 auto-format = true
@@ -63,7 +62,6 @@ injection-regex = "rust"
 file-types = ["rs"]
 roots = ["Cargo.toml", "Cargo.lock"]
 auto-format = true
-comment-token = "//"
 language-servers = ["rust-analyzer"]
 indent = { tab-width = 4, unit = "    " }
 

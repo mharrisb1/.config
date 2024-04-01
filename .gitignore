@@ -6,3 +6,7 @@ op/
 
 # ignore zed
 zed/
+
+# misc
+.DS_Store
+

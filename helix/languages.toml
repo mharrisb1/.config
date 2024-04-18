@@ -13,6 +13,13 @@ auto-format = true
 name = "c"
 auto-format = true
 
+##########
+# C++
+##########
+[[language]]
+name = "cpp"
+auto-format = true
+
 ############
 # Markdown
 ############

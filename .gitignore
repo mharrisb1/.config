@@ -4,9 +4,10 @@ gcloud/
 # ignore 1password
 op/
 
-# ignore zed
-zed/
+# zed
+zed/*
+!zed/settings.json
+!zed/themes/fleet.json
 
 # misc
 .DS_Store
-

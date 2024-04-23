@@ -10,6 +10,7 @@ completion-replace = false
 rulers = [88]
 bufferline = "always"
 color-modes = true
+true-color = true
 
 [editor.lsp]
 display-messages = true

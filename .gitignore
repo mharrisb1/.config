@@ -4,7 +4,13 @@ gcloud/
 # ignore 1password
 op/
 
-# zed
+# ignore gh hosts (has PATs)
+gh/hosts.yml
+
+# ignore htop
+htop/
+
+# ignore zed but allow themes
 zed/*
 !zed/settings.json
 !zed/themes/fleet.json

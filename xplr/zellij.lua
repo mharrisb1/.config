@@ -173,7 +173,7 @@ xplr.config.modes.builtin.default = {
         messages = {
           {
             BashExecSilently0 = [===[
-              zellij run --close-on-exit -- hx "${XPLR_FOCUS_PATH:?}"
+              zellij run --close-on-exit -d right -- hx "${XPLR_FOCUS_PATH:?}"
             ]===],
           }
         }

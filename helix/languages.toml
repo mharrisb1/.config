@@ -51,6 +51,7 @@ workingDirectory = { mode = "auto" }
 name = "markdown"
 language-servers = ["marksman", "github-lsp"]
 formatter = { command = "prettier", args = ["--parser", "markdown"] }
+soft-wrap.enable = true
 auto-format = true
 
 [language.auto-pairs]

@@ -1,4 +1,4 @@
-theme = "fleet_dark_modified"
+theme = "fleet_darker"
 
 [editor]
 shell = ["zsh", "-c"]

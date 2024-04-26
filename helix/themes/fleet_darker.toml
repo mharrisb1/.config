@@ -117,6 +117,8 @@
 "diagnostic.info" = { underline = { color = "#A366C4", style = "line" } }
 "diagnostic.warning" = { underline = { color = "#FACB66", style = "line" } }
 "diagnostic.error" = { underline = { color = "#FF5269", style = "line" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
 
 [palette]
 "White" = "#ffffff"
@@ -131,7 +133,7 @@
 "Gray 40" = "#333333"
 "Gray 30" = "#2d2d2d"
 "Gray 20" = "#272727"
-"Gray 10" = "#131313"
+"Gray 10" = "#0c0c0c"
 "Black" = "#000000"
 "Blue 110" = "#6daaf7"
 "Blue 100" = "#4d9bf8"

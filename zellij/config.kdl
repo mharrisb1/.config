@@ -237,44 +237,31 @@ plugins {
 // For more examples, see: https://github.com/zellij-org/zellij/tree/main/example/themes
 // Once these themes are defined, one of them should to be selected in the "theme" section of this file
 //
-// themes {
-//     dracula {
-//         fg 248 248 242
-//         bg 40 42 54
-//         red 255 85 85
-//         green 80 250 123
-//         yellow 241 250 140
-//         blue 98 114 164
-//         magenta 255 121 198
-//         orange 255 184 108
-//         cyan 139 233 253
-//         black 0 0 0
-//         white 255 255 255
-//     }
-//     fleet-dark {
-//         fg "#d1d1d1"
-//         bg "#131313"
-//         red "#cc7c8a" // coral
-//         green "#a8cc7c" // lime
-//         blue "#add1de"
-//         yellow "#f0c884"
-//         magenta "#e394dc"
-//         orange "#e09b70"
-//         cyan "#82d2ce"
-//         black "#131313"
-//         white "#d1d1d1"
-//     }
-// }
+themes {
+   dracula {
+        fg 248 248 242
+        bg 40 42 54
+        black 0 0 0
+        red 255 85 85
+        green 80 250 123
+        yellow 241 250 140
+        blue 98 114 164
+        magenta 255 121 198
+        cyan 139 233 253
+        white 255 255 255
+        orange 255 184 108
+    }
+}
 
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-// theme "fleet-dark"
+theme "dracula"
 
 // The name of the default layout to load on startup
 // Default: "default"
 //
-default_layout "ide"
+default_layout "default"
 
 // Choose the mode that zellij uses when starting up.
 // Default: normal

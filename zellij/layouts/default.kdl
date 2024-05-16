@@ -10,17 +10,9 @@ layout {
     }
 
 	tab name="editor" focus=true split_direction="vertical" {
-		pane split_direction="vertical" {
-			pane size="15%" name="xplr" {
-				command "zsh"
-				args "-c" "xplr -c $HOME/.config/xplr/zellij.lua --vroot $PWD"
-			}
-			pane focus=true split_direction="vertical" {
-				pane focus=true name="hx ." {
-					command "zsh"
-					args "-c" "hx ."
-				}
-			}
+		pane focus=true name="hx ." {
+			command "zsh"
+			args "-c" "hx ."
 		}
 	}
 

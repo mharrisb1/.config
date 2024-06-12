@@ -20,7 +20,6 @@ auto-format = true
 name = "cpp"
 auto-format = true
 
-
 ############
 # ESLint
 ############

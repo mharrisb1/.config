@@ -1,6 +1,6 @@
 # Configuration Files
 
-![zellij-example](./assets/zellij-example.png)
+![example](./assets/example.png)
 
 ## Tools
 

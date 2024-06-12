@@ -15,5 +15,8 @@ zed/*
 !zed/settings.json
 !zed/themes/fleet.json
 
+# ignore lazygit state
+lazygit/state.yml
+
 # misc
 .DS_Store

@@ -37,11 +37,26 @@ rulesCustomizations = []
 run = "onType"
 useESLintClass = false
 validate = "on"
-codeAction = { disableRuleComment = { enable = true, location = "separateLine" }, showDocumentation = { enable = true } }
-codeActionOnSave = { mode = "all" }
 experimental = { useFlatConfig = true }
 problems = { shortenToSingleLine = false }
-workingDirectory = { mode = "auto" }
+
+[language-server.eslint.config.codeAction]
+[language-server.eslint.config.codeAction.disableRuleComment]
+enable = true
+location = "separateLine"
+
+[language-server.eslint.config.codeAction.showDocumentation]
+enable = true
+
+[language-server.eslint.config.codeActionOnSave]
+enable = true
+mode = "fixAll"
+
+[language-server.eslint.config.workingDirectory]
+mode = "location"
+
+[language-server.typescript-language-server.config]
+documentFormatting = false
 
 ############
 # Markdown
@@ -120,20 +135,16 @@ auto-format = true
 [[language]]
 name = "typescript"
 language-servers = ["typescript-language-server", "eslint"]
-formatter = { command = 'prettier', args = ["--stdin-filepath", "file.ts"] }
-auto-format = false
+# formatter = { command = 'prettier', args = ["--stdin-filepath", "file.ts"] }
+auto-format = true
 
 ############
 # Vue
 ############
 [[language]]
 name = "vue"
-scope = "source.vue"
-injection-regex = "vue"
-file-types = ["vue"]
-language-servers = ["volar", "tailwindcss"]
-formatter = { command = 'prettier', args = ["--parser", "vue"] }
-roots = ["package.json"]
+language-servers = ["volar", "tailwindcss", "eslint"]
+# formatter = { command = 'prettier', args = ["--parser", "vue"] }
 auto-format = false
 
 [language-server.volar]

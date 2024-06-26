@@ -13,51 +13,6 @@ auto-format = true
 name = "c"
 auto-format = true
 
-##########
-# C++
-##########
-[[language]]
-name = "cpp"
-auto-format = true
-
-############
-# ESLint
-############
-[language-server.eslint]
-args = ["--stdio"]
-command = "vscode-eslint-language-server"
-
-[language-server.eslint.config]
-format = true
-nodePath = ""
-onIgnoredFiles = "off"
-packageManager = "pnpm"
-quiet = false
-rulesCustomizations = []
-run = "onType"
-useESLintClass = false
-validate = "on"
-experimental = { useFlatConfig = true }
-problems = { shortenToSingleLine = false }
-
-[language-server.eslint.config.codeAction]
-[language-server.eslint.config.codeAction.disableRuleComment]
-enable = true
-location = "separateLine"
-
-[language-server.eslint.config.codeAction.showDocumentation]
-enable = true
-
-[language-server.eslint.config.codeActionOnSave]
-enable = true
-mode = "fixAll"
-
-[language-server.eslint.config.workingDirectory]
-mode = "location"
-
-[language-server.typescript-language-server.config]
-documentFormatting = false
-
 ############
 # Markdown
 ############
@@ -134,8 +89,12 @@ auto-format = true
 ###########
 [[language]]
 name = "typescript"
-language-servers = ["typescript-language-server", "eslint"]
-# formatter = { command = 'prettier', args = ["--stdin-filepath", "file.ts"] }
+language-servers = ["typescript-language-server"]
+formatter = { command = 'pnpm', args = [
+  "prettier",
+  "--stdin-filepath",
+  "file.ts",
+] }
 auto-format = true
 
 ############
@@ -143,8 +102,8 @@ auto-format = true
 ############
 [[language]]
 name = "vue"
-language-servers = ["volar", "tailwindcss", "eslint"]
-# formatter = { command = 'prettier', args = ["--parser", "vue"] }
+language-servers = ["volar", "tailwindcss"]
+formatter = { command = 'pnpm', args = ["prettier", "--parser", "vue"] }
 auto-format = false
 
 [language-server.volar]

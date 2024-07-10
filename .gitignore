@@ -18,5 +18,8 @@ zed/*
 # ignore lazygit state
 lazygit/state.yml
 
+# ignore wireshark
+wireshark/
+
 # misc
 .DS_Store

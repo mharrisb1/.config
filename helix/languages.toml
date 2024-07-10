@@ -70,13 +70,6 @@ indent = { tab-width = 4, unit = "    " }
 command = "clippy"
 
 ############
-# Tailwindcss
-############
-[language-server.tailwindcss]
-command = "tailwindcss-language-server"
-args = ["--stdio"]
-
-############
 # TOML
 ############
 [[language]]
@@ -90,25 +83,5 @@ auto-format = true
 [[language]]
 name = "typescript"
 language-servers = ["typescript-language-server"]
-formatter = { command = 'pnpm', args = [
-  "prettier",
-  "--stdin-filepath",
-  "file.ts",
-] }
+formatter = { command = 'prettier', args = ["--stdin-filepath", "file.ts"] }
 auto-format = true
-
-############
-# Vue
-############
-[[language]]
-name = "vue"
-language-servers = ["volar", "tailwindcss"]
-formatter = { command = 'pnpm', args = ["prettier", "--parser", "vue"] }
-auto-format = false
-
-[language-server.volar]
-command = "vue-language-server"
-args = ["--stdio"]
-
-[language-server.volar.config]
-typescript = { tsdk = "./node_modules/typescript/lib" }

@@ -12,8 +12,6 @@ declare -A npm_packages=(
   [docker]="dockerfile-language-server-nodejs"
   [web]="vscode-langservers-extracted typescript typescript-language-server prettier"
   [python]="pyright"
-  [tailwindcss]="@tailwindcss/language-server"
-  [vue]="@vue/language-server@1.8.27"
   [yaml]="yaml-language-server"
 )
 

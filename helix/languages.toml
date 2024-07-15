@@ -54,6 +54,19 @@ command = "black"
 args = ["--quiet", "-"]
 
 ############
+# Scheme
+############
+[[language]]
+name = "scheme"
+formatter = { command = "schemat" }
+auto-format = true
+language-servers = ["steel-language-server"]
+
+[language-server.steel-language-server]
+command = "steel-language-server"
+args = []
+
+############
 # Rust
 ###########
 [[language]]

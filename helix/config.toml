@@ -16,7 +16,7 @@ true-color = true
 
 [editor.lsp]
 display-messages = true
-auto-signature-help = false
+auto-signature-help = true
 display-inlay-hints = true
 
 [editor.indent-guides]

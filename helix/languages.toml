@@ -20,13 +20,13 @@ auto-format = true
 name = "typescript"
 language-servers = ["typescript-language-server", "eslint"]
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-auto-format = true
+auto-format = false
 
 [[language]]
 name = "javascript"
 language-servers = ["typescript-language-server", "eslint"]
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-auto-format = true
+auto-format = false
 
 [language-server.eslint]
 args = ["--stdio"]
@@ -44,8 +44,8 @@ run = "onType"
 validate = "on"
 codeAction = { disableRuleComment = { enable = true, location = "separateLine" }, showDocumentation = { enable = true } }
 codeActionsOnSave = { mode = "all" }
-experimental = {}
-problems = { shortenToSingleLine = false }
+experimental = { useFlatConfig = true }
+problems = { shortenToSingleLine = true }
 workingDirectory = { mode = "auto" }
 
 ############
@@ -119,3 +119,27 @@ command = "clippy"
 name = "toml"
 formatter = { command = "taplo", args = ["fmt", "-"] }
 auto-format = true
+
+###########
+# Vue
+###########
+
+[[language]]
+name = "vue"
+auto-format = false
+formatter = { command = "prettier", args = ["--parser", "vue"] }
+language-servers = ["typescript-language-server", "eslint"]
+
+[[language-server.typescript-language-server.config.plugins]]
+name = "@vue/typescript-plugin"
+location = "/Users/michaelharris/.nvm/versions/node/v20.15.1/lib/node_modules/@vue/language-server/"
+languages = ["vue"]
+
+[language-server.typescript-language-server.config.init_options.preferences]
+includeInlayParameterNameHints = "all"
+includeInlayParameterNameHintsWhenArgumentMatchesName = false
+includeInlayFunctionParameterTypeHints = true
+includeInlayVariableTypeHints = true
+includeInlayPropertyDeclarationTypeHints = true
+includeInlayFunctionLikeReturnTypeHints = true
+includeInlayEnumMemberValueHints = true

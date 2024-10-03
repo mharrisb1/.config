@@ -21,5 +21,8 @@ lazygit/state.yml
 # ignore wireshark
 wireshark/
 
+# ngrok
+ngrok/
+
 # misc
 .DS_Store

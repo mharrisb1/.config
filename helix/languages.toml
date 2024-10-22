@@ -124,22 +124,33 @@ auto-format = true
 # Vue
 ###########
 
+# [[language]]
+# name = "vue"
+# auto-format = false
+# formatter = { command = "prettier", args = ["--parser", "vue"] }
+# language-servers = [
+#   "vuels",
+#   "typescript-language-server",
+#   "eslint",
+#   # "tailwindcss",
+# ]
+
 [[language]]
 name = "vue"
-auto-format = false
 formatter = { command = "prettier", args = ["--parser", "vue"] }
-language-servers = ["vuels", "typescript-language-server", "eslint"]
+auto-format = false
+language-servers = [
+  "typescript-language-server",
+  "tailwindcss",
+  "vuels",
+  "eslint",
+]
 
 [[language-server.typescript-language-server.config.plugins]]
 name = "@vue/typescript-plugin"
-location = "/Users/michaelharris/.nvm/versions/node/v20.15.1/lib/node_modules/@vue/language-server/"
+location = "/Users/michaelharris/.nvm/versions/node/v20.15.1/lib/node_modules/@vue/typescript-plugin"
 languages = ["vue"]
 
-[language-server.typescript-language-server.config.init_options.preferences]
-includeInlayParameterNameHints = "all"
-includeInlayParameterNameHintsWhenArgumentMatchesName = false
-includeInlayFunctionParameterTypeHints = true
-includeInlayVariableTypeHints = true
-includeInlayPropertyDeclarationTypeHints = true
-includeInlayFunctionLikeReturnTypeHints = true
-includeInlayEnumMemberValueHints = true
+[language-server.tailwindcss]
+command = "tailwindcss-language-server"
+args = ["--stdio"]

@@ -128,7 +128,7 @@ auto-format = true
 name = "vue"
 auto-format = false
 formatter = { command = "prettier", args = ["--parser", "vue"] }
-language-servers = ["typescript-language-server", "eslint"]
+language-servers = ["vuels", "typescript-language-server", "eslint"]
 
 [[language-server.typescript-language-server.config.plugins]]
 name = "@vue/typescript-plugin"

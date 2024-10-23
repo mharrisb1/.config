@@ -18,13 +18,13 @@ auto-format = true
 ###########
 [[language]]
 name = "typescript"
-language-servers = ["typescript-language-server", "eslint"]
+language-servers = ["typescript-language-server"]
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = false
 
 [[language]]
 name = "javascript"
-language-servers = ["typescript-language-server", "eslint"]
+language-servers = ["typescript-language-server"]
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = false
 
@@ -123,18 +123,6 @@ auto-format = true
 ###########
 # Vue
 ###########
-
-# [[language]]
-# name = "vue"
-# auto-format = false
-# formatter = { command = "prettier", args = ["--parser", "vue"] }
-# language-servers = [
-#   "vuels",
-#   "typescript-language-server",
-#   "eslint",
-#   # "tailwindcss",
-# ]
-
 [[language]]
 name = "vue"
 formatter = { command = "prettier", args = ["--parser", "vue"] }
@@ -143,7 +131,7 @@ language-servers = [
   "typescript-language-server",
   "tailwindcss",
   "vuels",
-  "eslint",
+  # "eslint",
 ]
 
 [[language-server.typescript-language-server.config.plugins]]

@@ -6,6 +6,7 @@
 
 | Tool       | Link                                     |
 | ---------- | ---------------------------------------- |
+| bat        | https://github.com/sharkdp/bat           |
 | Github CLI | https://cli.github.com                   |
 | Helix      | https://helix-editor.com                 |
 | lazygit    | https://github.com/jesseduffield/lazygit |

@@ -112,6 +112,15 @@ indent = { tab-width = 4, unit = "    " }
 [language-server.rust-analyzer.config.check]
 command = "clippy"
 
+[[language]]
+name = "sql"
+formatter = { command = "zsh", args = [
+  "-c",
+  "sqlglot-cli transpile - -w postgres --identity --normalize --pad 2 --comments | sqlglot-cli optimize - --all --pretty",
+] }
+auto-format = false
+
+
 ############
 # TOML
 ############

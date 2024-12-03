@@ -7,12 +7,14 @@ shell = ["zsh", "-c"]
 line-number = "relative"
 cursorline = true
 auto-format = true
+completion-timeout = 5
 preview-completion-insert = false
 completion-replace = false
 rulers = [81]
 bufferline = "always"
 color-modes = true
 true-color = true
+undercurl = true
 
 [editor.lsp]
 display-messages = true

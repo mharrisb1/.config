@@ -8,6 +8,7 @@ line-number = "relative"
 cursorline = true
 auto-format = true
 completion-timeout = 5
+completion-trigger-len = 1
 preview-completion-insert = false
 completion-replace = false
 rulers = [81]

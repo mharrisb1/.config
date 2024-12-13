@@ -1,6 +1,4 @@
-# Configuration Files
-
-## Tools
+# Configuration
 
 | Tool       | Link                                     |
 | ---------- | ---------------------------------------- |
@@ -9,4 +7,5 @@
 | Helix      | https://helix-editor.com                 |
 | lazygit    | https://github.com/jesseduffield/lazygit |
 | xplr       | https://xplr.dev                         |
+| Warp       | https://www.warp.dev/                    |
 | Zellij     | https://zellij.dev                       |

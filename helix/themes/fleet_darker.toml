@@ -1,54 +1,61 @@
 # Fleet Dark
-# A take on the JetBrains Fleet theme. Feel free to contribute
-
+# A refined version combining original port and Helix editor's Fleet Dark theme.
 # Original author: @krfl
 # Contributors:
 # @matoous
 # @kirawi
-#
-# Modifier:
 # @mharrisb1
 
-"attribute" = "Lime"
+# Syntax Highlighting
+# -------------------
+"attribute" = "Cyan"
 
 "type" = "Blue"
 "type.return" = "Blue Light"
 "type.parameter" = "Blue Light"
+
 "constructor" = "Yellow"
 
 "constant" = "Violet"
-# "constant.builtin" = {} # .boolean
-"constant.builtin.boolean" = "Cyan"
+"constant.builtin" = "Cyan"
 "constant.character" = "Yellow"
 "constant.character.escape" = "Cyan"
 "constant.numeric" = "Yellow"
+
 "string" = "Pink"
 "string.regexp" = "Cyan"
 "string.special" = { fg = "Yellow", modifiers = [
   "underlined",
-] } #.path / .url / .symbol
+] } # .path / .url / .symbol
+"string.special.symbol" = "Red"
 
-"comment" = "Gray 90" # .line
-# "comment.block" = {} # .documentation
-"variable" = "Gray 120"               # .builtin
-"variable.builtin" = { fg = "Coral" }
-# "variable.other" = {} # .member
+"comment" = { fg = "Gray 90", modifiers = ["italic"] }
+
+"variable" = "Gray 120"
+"variable.parameter" = { fg = "Coral", modifiers = ["italic"] }
+"variable.builtin" = "Coral"
 "variable.other.member" = "Violet"
+
 "label" = "Yellow"
-"keyword" = "Cyan"                 # .operator / .directive / .function
+
+"keyword" = "Cyan"
+"keyword.control.conditional" = { fg = "Cyan", modifiers = ["italic"] }
+
+"operator" = "Cyan"
+
 "function" = "Yellow"
 "function.declaration" = "#EFEFEF"
 "function.macro" = "Lime"
 "function.builtin" = "Lime"
 "function.special" = "Lime"
-#"function.declaration.method" = { fg = "lightest", modifiers = ["bold"] } #depends on #4892
-"tag" = "Blue"
-"special" = "Lime"
-"namespace" = "Blue"
 
-# used in theming
-# "markup" = {} # .normal / .quote / .raw
-# "markup.normal" = {} # .completion / .hover
+"tag" = "Blue"
+
+"special" = "Lime" # fuzzy highlight
+
+"namespace" = { fg = "Blue", modifiers = ["italic"] }
+
+# Markup
 "markup.bold" = { modifiers = ["bold"] }
 "markup.italic" = { modifiers = ["italic"] }
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
@@ -58,68 +65,77 @@
 "markup.list" = "Pink" # .unnumbered / .numbered
 "markup.list.numbered" = "Cyan"
 "markup.list.unnumbered" = "Cyan"
-# "markup.link" = "green"
-"markup.link.url" = { fg = "Pink", modifiers = ['italic', 'underlined'] }
+"markup.link.url" = { fg = "Pink", modifiers = ["italic", "underlined"] }
 "markup.link.text" = "Cyan"
 "markup.link.label" = "Purple 20"
 "markup.quote" = "Pink"
 "markup.raw" = "Pink"
-"markup.raw.inline" = "Cyan"                                              # .completion / .hover
+"markup.raw.inline" = "Cyan" # .completion / .hover
 "markup.raw.block" = "#EB83E2"
 
+# Diff
 "diff.plus" = "Green 50"
 "diff.minus" = "Red 50"
 "diff.delta" = "Blue 80"
 
-# ui specific
-"ui.background" = { bg = "Gray 10" }                          # .separator
-"ui.statusline" = { fg = "Gray 120", bg = "Gray 20" }         # .inactive / .normal / .insert / .select
+# User Interface
+# --------------
+"ui.background" = { bg = "Gray 10" } # .separator
+
+"ui.statusline" = { fg = "Gray 120", bg = "Gray 20" }
 "ui.statusline.normal" = { fg = "Gray 120", bg = "Gray 20" }
-"ui.statusline.inactive" = { fg = "Gray 90", bg = "#181818" }
-"ui.statusline.insert" = { fg = "Gray 20", bg = "Blue 90" }
-"ui.statusline.select" = { fg = "Gray 20", bg = "Yellow 60" }
+"ui.statusline.inactive" = { fg = "Gray 90" }
+"ui.statusline.insert" = { fg = "Gray 20", bg = "Blue 90", modifiers = [
+  "bold",
+] }
+"ui.statusline.select" = { fg = "Gray 20", bg = "Yellow 60", modifiers = [
+  "bold",
+] }
 
-"ui.bufferline" = { fg = "Gray 120", bg = "Gray 20" }
-"ui.bufferline.active" = { fg = "Gray 120", bg = "#440ecf" }
+"ui.cursor" = { modifiers = ["reversed"] }
+"ui.cursor.match" = { bg = "Blue 30" }
 
-"ui.cursor" = { modifiers = [
-  "reversed",
-] } # .insert / .select / .match / .primary
-"ui.cursor.match" = { bg = "Blue 30" } # .insert / .select / .match / .primary
-"ui.selection" = { bg = "Gray 50" } # .primary
+"ui.selection" = { bg = "Gray 50" }
 "ui.selection.primary" = { bg = "Blue 40" }
 
-"ui.cursorline" = { bg = "Gray 20" }
+"ui.cursorline" = { bg = "Gray 15" }
 "ui.linenr" = "Gray 70"
 "ui.linenr.selected" = "Gray 110"
 
-"ui.popup" = { fg = "Gray 120", bg = "Gray 20" }      # .info
+"ui.popup" = { fg = "Gray 120", bg = "Gray 20" }
 "ui.window" = { fg = "Gray 50" }
 "ui.help" = { fg = "Gray 120", bg = "Gray 20" }
-"ui.menu" = { fg = "Gray 120", bg = "Gray 20" }       # .selected
-"ui.menu.selected" = { fg = "White", bg = "Blue 40" } # .selected
-# Calculated as #ffffff with 30% opacity
+
+"ui.bufferline.active" = { fg = "White", bg = "Blue 70", modifiers = ["bold"] }
+
+"ui.menu" = { fg = "Gray 120", bg = "Gray 20" }
+"ui.menu.selected" = { fg = "White", bg = "Blue 40", modifiers = ["bold"] }
 "ui.menu.scroll" = { fg = "#dfdfdf" }
 
-"ui.text" = "Gray 120"                             # .focus / .info
-"ui.text.focus" = { fg = "White", bg = "Blue 40" }
+"ui.text" = "Gray 120"
+"ui.text.focus" = { fg = "White", bg = "Blue 40", modifiers = ["bold"] }
+"ui.text.inactive" = { fg = "Gray 80" }
 
-"ui.virtual" = "Gray 90"                     # .whitespace
+"ui.virtual" = "Gray 90"
 "ui.virtual.inlay-hint" = { fg = "Gray 70" }
 "ui.virtual.ruler" = { bg = "Gray 20" }
+"ui.virtual.indent-guide" = "Gray 20"
 
+# Diagnostics
 "hint" = "Gray 80"
 "info" = "#A366C4"
-"warning" = "#FACb66"
+"warning" = "#FACB66"
 "error" = "#FF5269"
 
-"diagnostic.hint" = { underline = { color = "Gray 80", style = "line" } }
-"diagnostic.info" = { underline = { color = "#A366C4", style = "line" } }
-"diagnostic.warning" = { underline = { color = "#FACB66", style = "line" } }
-"diagnostic.error" = { underline = { color = "#FF5269", style = "line" } }
+"diagnostic.hint" = { underline = { color = "Gray 80", style = "curl" } }
+"diagnostic.info" = { underline = { color = "Cyan", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "Yellow 60", style = "curl" } }
+"diagnostic.error" = { underline = { color = "Red 80", style = "curl" } }
 "diagnostic.unnecessary" = { modifiers = ["dim"] }
 "diagnostic.deprecated" = { modifiers = ["crossed_out"] }
 
+# Palette
+# -------
 [palette]
 "White" = "#ffffff"
 "Gray 120" = "#d1d1d1"
@@ -132,8 +148,9 @@
 "Gray 50" = "#383838"
 "Gray 40" = "#333333"
 "Gray 30" = "#2d2d2d"
-"Gray 20" = "#272727"
-"Gray 10" = "#0c0c0c"
+"Gray 20" = "#292929"
+"Gray 15" = "#1F1F1F"
+"Gray 10" = "#181818"
 "Black" = "#000000"
 "Blue 110" = "#6daaf7"
 "Blue 100" = "#4d9bf8"
@@ -146,6 +163,7 @@
 "Blue 30" = "#163764"
 "Blue 20" = "#132c4f"
 "Blue 10" = "#0b1b32"
+
 "Red 80" = "#ec7388"
 "Red 70" = "#ea4b67"
 "Red 60" = "#d93953"
@@ -154,17 +172,20 @@
 "Red 30" = "#a72a3f"
 "Red 20" = "#761b2d"
 "Red 10" = "#390813"
+
 "Green 50" = "#4ca988"
 "Green 40" = "#3ea17f"
 "Green 30" = "#028764"
 "Green 20" = "#134939"
 "Green 10" = "#081f19"
+
 "Yellow 60" = "#f8ab17"
 "Yellow 50" = "#e1971b"
 "Yellow 40" = "#b5791f"
 "Yellow 30" = "#7c511a"
 "Yellow 20" = "#5a3a14"
 "Yellow 10" = "#281806"
+
 "Purple 20" = "#c07bf3"
 "Purple 10" = "#b35def"
 
@@ -176,5 +197,5 @@
 "Lime" = "#A8CC7C"
 "Orange" = "#E09B70"
 "Pink" = "#E394DC"
-"Violet" = "#a791ff"
-"Yellow" = "#f0c884"
+"Violet" = "#AF9CFF"
+"Yellow" = "#EBC88D"

@@ -1,26 +1,27 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
 gui:
-  # https://github.com/catppuccin/lazygit/blob/main/themes/mocha/green.yml
+  # Fleet Dark-inspired theme for LazyGit
   theme:
     activeBorderColor:
-      - '#a6e3a1'
+      - '#268BD2' # Soft blue accent (similar to Helix/Zed's cursor highlight)
       - bold
     inactiveBorderColor:
-      - '#a6adc8'
+      - '#333333' # Dark gray for inactive elements
     optionsTextColor:
-      - '#89b4fa'
+      - '#6C8EDB' # Muted blue (used in Zed for text accents)
     selectedLineBgColor:
-      - '#313244'
+      - '#1F1F1F' # Very dark gray for selected line background
     cherryPickedCommitBgColor:
-      - '#45475a'
+      - '#2C2C2C' # Slightly lighter dark gray for cherry-picked commits
     cherryPickedCommitFgColor:
-      - '#a6e3a1'
+      - '#A8CC7C' # Soft lime green for foreground, consistent with highlights
     unstagedChangesColor:
-      - '#f38ba8'
+      - '#E394DC' # Pink for unstaged changes, keeping subtle vibrance
     defaultFgColor:
-      - '#cdd6f4'
+      - '#D1D1D1' # Light gray for default text color
     searchingActiveBorderColor:
-      - '#f9e2af'
+      - '#F8AB17' # Yellow for search highlights (contrasting active borders)
 
   authorColors:
-    '*': '#b4befe'
+    '*': '#878EC0' # Muted lavender for author names, consistent with soft themes
+

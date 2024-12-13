@@ -251,12 +251,25 @@ themes {
         white 255 255 255
         orange 255 184 108
     }
+    fleet-dark {
+        fg 209 209 209
+        bg 24 24 24
+        black 24 24 24
+        red 236 115 136
+        green 76 169 136
+        yellow 248 171 23
+        blue 55 153 217
+        magenta 173 93 239
+        cyan 148 226 213
+        white 255 255 255
+        orange 225 151 27
+    }
 }
 
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-theme "catppuccin-mocha"
+theme "fleet-dark"
 
 // The name of the default layout to load on startup
 // Default: "default"

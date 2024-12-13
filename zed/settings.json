@@ -10,9 +10,11 @@
   "base_keymap": "VSCode",
   "theme": "Fleet Dark",
   "features": {
+    "inline_completion_provider": "none",
     "copilot": false
   },
-  "ui_font_size": 16,
+  "vim_mode": true,
+  "ui_font_size": 14,
   "buffer_font_size": 12,
   "current_line_highlight": "gutter",
   "format_on_save": "on",

@@ -1,7 +1,5 @@
 # Configuration Files
 
-![example](./assets/example.png)
-
 ## Tools
 
 | Tool       | Link                                     |

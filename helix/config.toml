@@ -39,6 +39,7 @@ P = "paste_clipboard_before"
 space = "file_picker"
 z = ":sh zellij run --close-on-exit --direction right -- hx ."
 x = ":sh zellij run --close-on-exit --floating -- xplr ."
+X = ":sh zellij run --close-on-exit --direction right -- xplr ."
 
 [keys.select]
 y = "yank_to_clipboard"

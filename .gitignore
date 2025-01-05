@@ -26,3 +26,6 @@ ngrok/
 
 # misc
 .DS_Store
+
+# uv
+uv/

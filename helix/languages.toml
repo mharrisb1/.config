@@ -77,11 +77,12 @@ language-servers = ["pyright", "ruff"]
 auto-format = true
 
 [language-server.ruff]
-command = "ruff-lsp"
+command = "ruff"
+args = ["server"]
+environment = { "RUFF_TRACE" = "messages" }
 
-[language.formatter]
-command = "black"
-args = ["--quiet", "-"]
+[language-server.ruff.config.settings]
+logLevel = "debug"
 
 ############
 # Scheme

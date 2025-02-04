@@ -7,11 +7,22 @@ formatter = { command = "shfmt", args = ["--indent", "2"] }
 auto-format = true
 
 ###########
-# C
+# C/C++
 ###########
 [[language]]
 name = "c"
 auto-format = true
+language-servers = ["clangd"]
+
+[[language]]
+name = "cpp"
+auto-format = false
+language-servers = ["clangd"]
+indent = { tab-width = 4, unit = "    " }
+
+[language-server.clangd]
+command = "clangd"
+args = ["--fallback-style=none"]
 
 ############
 # JS/TS

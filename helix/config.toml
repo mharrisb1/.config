@@ -28,7 +28,7 @@ render = true
 
 [editor.inline-diagnostics]
 cursor-line = "info"
-other-lines = "info"
+other-lines = "error"
 
 [editor.smart-tab]
 enable = false

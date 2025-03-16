@@ -95,20 +95,7 @@ environment = { "RUFF_TRACE" = "messages" }
 [language-server.ruff.config.settings]
 logLevel = "debug"
 
-############
-# Scheme
-############
-[[language]]
-name = "scheme"
-formatter = { command = "schemat" }
-auto-format = true
-language-servers = ["steel-language-server"]
-
-[language-server.steel-language-server]
-command = "steel-language-server"
-args = []
-
-############
+###########
 # Rust
 ###########
 [[language]]
@@ -124,14 +111,34 @@ indent = { tab-width = 4, unit = "    " }
 [language-server.rust-analyzer.config.check]
 command = "clippy"
 
+############
+# Scheme
+############
+[[language]]
+name = "scheme"
+formatter = { command = "schemat" }
+auto-format = true
+language-servers = ["steel-language-server"]
+
+[language-server.steel-language-server]
+command = "steel-language-server"
+args = []
+
+###########
+# SQL
+###########
 [[language]]
 name = "sql"
+language-servers = ["sql-language-server"]
 formatter = { command = "zsh", args = [
   "-c",
   "sqlglot-cli transpile - -w postgres --identity --normalize --pad 2 --comments | sqlglot-cli optimize - --all --pretty",
 ] }
 auto-format = false
 
+[language-server.sql-language-server]
+command = "sql-language-server"
+args = ["up", "--method", "stdio"]
 
 ############
 # TOML

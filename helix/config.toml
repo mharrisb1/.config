@@ -27,8 +27,8 @@ display-inlay-hints = true
 render = true
 
 [editor.inline-diagnostics]
-cursor-line = "info"
-other-lines = "error"
+cursor-line = "hint"
+other-lines = "disable"
 
 [editor.smart-tab]
 enable = false

@@ -2,16 +2,16 @@ theme = "fleet_darker"
 
 [editor]
 scrolloff = 0
-scroll-lines = 1
+mouse = true
+scroll-lines = 3
 shell = ["zsh", "-c"]
 line-number = "relative"
 cursorline = true
 auto-format = true
-completion-timeout = 5
-completion-trigger-len = 1
+completion-timeout = 250
+completion-trigger-len = 2
 preview-completion-insert = false
 completion-replace = false
-rulers = [81]
 bufferline = "always"
 color-modes = true
 true-color = true

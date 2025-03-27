@@ -7,10 +7,16 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "assistant": {
+    "default_model": {
+      "provider": "openai",
+      "model": "o3-mini"
+    },
+    "version": "2"
+  },
   "base_keymap": "VSCode",
   "theme": "Fleet Dark",
   "features": {
-    "inline_completion_provider": "none",
     "copilot": false
   },
   "vim_mode": true,

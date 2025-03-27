@@ -124,22 +124,6 @@ language-servers = ["steel-language-server"]
 command = "steel-language-server"
 args = []
 
-###########
-# SQL
-###########
-[[language]]
-name = "sql"
-language-servers = ["sql-language-server"]
-formatter = { command = "zsh", args = [
-  "-c",
-  "sqlglot-cli transpile - -w postgres --identity --normalize --pad 2 --comments | sqlglot-cli optimize - --all --pretty",
-] }
-auto-format = false
-
-[language-server.sql-language-server]
-command = "sql-language-server"
-args = ["up", "--method", "stdio"]
-
 ############
 # TOML
 ############
@@ -170,3 +154,8 @@ languages = ["vue"]
 [language-server.tailwindcss]
 command = "tailwindcss-language-server"
 args = ["--stdio"]
+
+[[language]]
+name = "yaml"
+auto-format = true
+formatter = { command = 'prettier', args = ["--parser", "yaml"] }

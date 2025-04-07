@@ -143,12 +143,12 @@ language-servers = [
   "typescript-language-server",
   "tailwindcss",
   "vuels",
-  # "eslint",
+  "eslint",
 ]
 
 [[language-server.typescript-language-server.config.plugins]]
 name = "@vue/typescript-plugin"
-location = "/Users/michaelharris/.nvm/versions/node/v20.15.1/lib/node_modules/@vue/typescript-plugin"
+location = "/Users/michaelharris/.nvm/versions/node/v22.14.0/lib/node_modules/@vue/typescript-plugin"
 languages = ["vue"]
 
 [language-server.tailwindcss]

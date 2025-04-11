@@ -140,10 +140,10 @@ name = "vue"
 formatter = { command = "prettier", args = ["--parser", "vue"] }
 auto-format = false
 language-servers = [
-  "vuels",
   "typescript-language-server",
   "tailwindcss",
-  "eslint",
+  "vuels",
+  # "eslint",
 ]
 
 [[language-server.typescript-language-server.config.plugins]]

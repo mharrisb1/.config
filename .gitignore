@@ -21,14 +21,15 @@ lazygit/state.yml
 # ignore wireshark
 wireshark/
 
-# ngrok
+# ignore ngrok
 ngrok/
 
 # misc
 .DS_Store
 
-# uv
+# ignore uv
 uv/
 
-# copilot
-github-copilot/
+# ignore claude
+claude/
+

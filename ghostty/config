@@ -12,8 +12,10 @@ window-subtitle = "working-directory"
 copy-on-select = "false"
 quit-after-last-window-closed = "true"
 quick-terminal-position = "bottom"
-macos-option-as-alt = "true"
+macos-option-as-alt = "false"
 macos-auto-secure-input = "true"
 macos-secure-input-indication = "true"
 auto-update = "check"
 keybind = shift+enter=text:\n
+keybind = alt+left=unbind
+keybind = alt+right=unbind

@@ -17,7 +17,7 @@ local xplr = xplr -- The globally exposed configuration to be overridden.
 -- version = "0.0.0"
 -- ```
 
-version = '0.21.5'
+version = '1.0.0'
 
 -- # Configuration ------------------------------------------------------------
 --

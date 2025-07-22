@@ -1,12 +1,13 @@
-font-family = "JetBrainsMonoNL Nerd Font Mono"
+font-family = "JetBrainsMono Nerd Font Mono"
+font-size = 10
 theme = "JetBrains Fleet"
 mouse-hide-while-typing = "true"
 background-opacity = "0.96"
 background-blur = "true"
 unfocused-split-opacity = "1"
 split-divider-color = "#595959"
-window-padding-x = "9"
-window-padding-y = "3"
+window-padding-x = 9
+window-padding-y = 12
 window-inherit-working-directory = "true"
 window-subtitle = "working-directory"
 copy-on-select = "false"
